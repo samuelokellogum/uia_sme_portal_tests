@@ -3,8 +3,8 @@ from selenium import webdriver
 import sys
 
 # Import Pages Needed for the tests
-from uia_tests.pages.login_page import Login
-from uia_tests.pages.dashboard_page import Dashboard
+from uia_sme_portal_tests.pages.login_page import Login
+from uia_sme_portal_tests.pages.dashboard_page import Dashboard
 
 class TestSettings(unittest.TestCase):  
     driver = None

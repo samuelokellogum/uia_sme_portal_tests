@@ -1,2 +1,2 @@
-from uia_tests import pages
-from uia_tests import tests
+from uia_sme_portal_tests import pages
+from uia_sme_portal_tests import tests

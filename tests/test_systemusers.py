@@ -2,8 +2,8 @@ import unittest
 from selenium import webdriver
 
 # Import Pages Needed for the tests
-from uia_tests.pages.login_page import Login
-from uia_tests.pages.systemuser_page import SystemUser
+from uia_sme_portal_tests.pages.login_page import Login
+from uia_sme_portal_tests.pages.systemuser_page import SystemUser
 
 class TestSystemUser(unittest.TestCase):  
     driver = None
