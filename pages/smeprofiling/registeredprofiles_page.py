@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 
 
-class SMEProfile:
+class RegisteredProfile:
     # Locators of all the elements    
     dashboard_button_xpath = "//button[normalize-space()='DASHBOARD']"
     add_sme_profile_btn = "//a[normalize-space()='Add SME Profile']"
@@ -11,6 +11,10 @@ class SMEProfile:
     # Initialise the driver
     def __init__(self, driver):
         self.driver = driver
+
+
+    def click_add_sme_profile_btn(self):
+        self.driver.find_element_by_xpath(By.XPATH, "//a[normalize-space()='Add SME Profile']").click()
 
     def add_sme_profile(self):
         self.driver.find_element(By.XPATH, self.add_sme_profile_btn).click()

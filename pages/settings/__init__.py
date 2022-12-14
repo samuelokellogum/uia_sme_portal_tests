@@ -1,0 +1,1 @@
+from uia_sme_portal_tests.pages.settings import activitylogs_page, approvalsettings_page, emailsettings_page, financialyears_page, genericlookups_page, lookupsmapping_page, securityroles_page, systemtimeout_page, systemusers_page, websitemanager_page
