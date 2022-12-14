@@ -1,0 +1,1 @@
+from uia_tests.tests import test_dashboard, test_login, test_settings, test_signup, test_smeprofile
