@@ -4,7 +4,6 @@ import sys
 
 # Import Pages Needed for the tests
 from uia_sme_portal_tests.pages.login_page import Login
-from uia_sme_portal_tests.pages.smeprofile_page import SMEProfile
 
 class TestSMEProfile(unittest.TestCase):  
     driver = None
@@ -17,7 +16,7 @@ class TestSMEProfile(unittest.TestCase):
         cls.driver.maximize_window()
         cls.driver.implicitly_wait(5)
 
-    def test_login(self):  
+    def test_smeprofile(self):  
         login = Login(self.driver)
         login.enter_username("admin")
         login.enter_password("administrator")

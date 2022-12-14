@@ -4,7 +4,6 @@ import sys
 
 # Import Pages Needed for the tests
 from uia_sme_portal_tests.pages.login_page import Login
-from uia_sme_portal_tests.pages.settings_page import Setting
 
 class TestSettings(unittest.TestCase):  
     driver = None
@@ -24,9 +23,7 @@ class TestSettings(unittest.TestCase):
         login.click_login()
         self.driver.implicitly_wait(5)
         self.driver.get("https://demo.dcareug.com/uia/Lookup/Details") 
-        add_lookup = Setting(self.driver)  
-        # add_lookup.add_lookup_class('District')           
-        add_lookup.click_save_and_continue()
+ 
         self.assertEquals('New Lookup Value - MSD', self.driver.title)
 
     def test_edit_lookup(self):
