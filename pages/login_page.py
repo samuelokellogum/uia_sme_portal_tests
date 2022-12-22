@@ -1,5 +1,6 @@
 from selenium.webdriver.common.by import By
 
+
 class Login:
 
     def __init__(self, driver):
@@ -18,3 +19,6 @@ class Login:
 
     def login_btn(self):
         self.driver.find_element(By.XPATH, "//input[@value='Login']").click()
+
+    def logout_btn(self):
+        self.driver.find_element(By.XPATH, "//a[normalize-space()='Logout']").click()
