@@ -62,10 +62,10 @@ class TestSMEProfile(unittest.TestCase):
     # def test_logout(self):
     #     self.assert_(False)  
 
-    # @classmethod
-    # def tearDownClass(cls):
-    #     cls.driver.close()
-    #     cls.driver.quit()
+    @classmethod
+    def tearDownClass(cls):
+        cls.driver.close()
+        cls.driver.quit()
 
 if __name__ == '__main__':
     unittest.main()

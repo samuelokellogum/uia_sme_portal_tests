@@ -24,10 +24,10 @@ class TestLogout(unittest.TestCase):
         login.logout_btn()     
         self.assertEquals('Home - UIA SME Portal', self.driver.title)
 
-    # @classmethod
-    # def tearDownClass(cls):
-    #     cls.driver.close()
-    #     cls.driver.quit()
+    @classmethod
+    def tearDownClass(cls):
+        cls.driver.close()
+        cls.driver.quit()
 
 if __name__ == '__main__':
     unittest.main()

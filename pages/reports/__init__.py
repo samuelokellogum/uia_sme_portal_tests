@@ -1,1 +1,1 @@
-from uia_sme_portal_tests.pages.reports import datadump_page, enumeratorstats_page, valuechainreport_page
+from uia_sme_portal_tests.pages.reports import data_dump_page, enumerator_stats_page, value_chain_report_page

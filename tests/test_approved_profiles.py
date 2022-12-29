@@ -24,10 +24,10 @@ class TestApprovedProfile(unittest.TestCase):
         time.sleep(15) 
         self.assertEquals('Approved SME Profiles - UIA SME Portal', self.driver.title)
    
-    # @classmethod
-    # def tearDownClass(cls):
-    #     cls.driver.close()
-    #     cls.driver.quit()
+    @classmethod
+    def tearDownClass(cls):
+        cls.driver.close()
+        cls.driver.quit()
 
 if __name__ == '__main__':
     unittest.main()
