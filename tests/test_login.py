@@ -1,9 +1,6 @@
 import time
 import unittest
 from selenium import webdriver
-import sys
-
-# Import Pages Needed for the tests
 from uia_sme_portal_tests.pages.login_page import Login
 
 class TestLogin(unittest.TestCase):  

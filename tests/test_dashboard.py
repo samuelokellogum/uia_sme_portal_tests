@@ -1,12 +1,9 @@
 import unittest
 from selenium import webdriver
-import sys
-
-# Import Pages Needed for the tests
 from uia_sme_portal_tests.pages.login_page import Login
 from uia_sme_portal_tests.pages.dashboard_page import Dashboard
 
-class TestSettings(unittest.TestCase):  
+class TestDashboard(unittest.TestCase):  
     driver = None
     baseURL = "https://demo.dcareug.com/uia/Account/Login"
     

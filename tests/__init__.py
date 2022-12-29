@@ -1,1 +1,1 @@
-from uia_sme_portal_tests.tests import test_dashboard, test_login, test_settings, test_signup, test_smeprofile
+from uia_sme_portal_tests.tests import test_dashboard, test_login, test_logout, test_register, test_settings, test_signup, test_sme_profile, test_system_user, test_approved_profiles, test_lgine_profile

@@ -1,8 +1,6 @@
+import time
 import unittest
 from selenium import webdriver
-import sys
-
-# Import Pages Needed for the tests
 from uia_sme_portal_tests.pages.signup_page import Signup
 
 class TestSignup(unittest.TestCase):  
