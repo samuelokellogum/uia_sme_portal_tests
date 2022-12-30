@@ -14,7 +14,7 @@ class TestLgineProfile(unittest.TestCase):
         cls.driver.maximize_window()
         cls.driver.implicitly_wait(5)
 
-    def test_access_lgineprofilepage(self):  
+    def test_access_lgine_profile_page(self):  
         login = Login(self.driver)
         login.enter_username("admin")
         login.enter_password("administrator")

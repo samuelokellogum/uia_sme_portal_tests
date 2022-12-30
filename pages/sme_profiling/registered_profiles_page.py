@@ -51,10 +51,10 @@ class RegisteredProfile:
         drop.select_by_visible_text(village)    
 
     def enter_firstname(self, firstname):
-        self.driver.find_element(By.ID, "//input[@id='FirstName']").send_keys(firstname)    
+        self.driver.find_element(By.XPATH, "//input[@id='FirstName']").send_keys(firstname)    
 
     def enter_lastname(self, lastname):
-        self.driver.find_element(By.ID, "//input[@id='LastName']").send_keys(lastname)  
+        self.driver.find_element(By.XPATH, "//input[@id='LastName']").send_keys(lastname)  
 
     def enter_othername(self, othername):  
         self.driver.find_element(By.XPATH, "//input[@id='OtherName']").clear()
@@ -120,8 +120,7 @@ class RegisteredProfile:
               
     def first_create_sme_profile(self):
         self.driver.find_element(By.PATH, self.next_btn).click()
-
-    # Action method for every element
+    
     def click_logout(self):
         self.driver.find_element(By.XPATH, self.logout_link_xpath).click()
 

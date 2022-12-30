@@ -15,15 +15,9 @@ class TestSMEProfile(unittest.TestCase):
         cls.driver.maximize_window()
         cls.driver.implicitly_wait(5)
 
-    # def test_smeprofile(self):  
-    #     login = Login(self.driver)
-    #     login.enter_username("admin")
-    #     login.enter_password("administrator")
-    #     login.click_login()
-    #     self.driver.implicitly_wait(5)
-    #     self.driver.get("https://demo.dcareug.com/uiatest/")
-    #     self.assertEquals('SME Profile - UIA', self.driver.title)
-
+    def test_sme_profile(self):  
+        pass
+   
     def test_registered_profile(self):
         login = Login(self.driver)
         register = RegisteredProfile(self.driver)
@@ -58,10 +52,7 @@ class TestSMEProfile(unittest.TestCase):
         register.enter_owner_structure()
         register.first_create_sme_profile()   
         self.driver.implicitly_wait(15)     
-
-    # def test_logout(self):
-    #     self.assert_(False)  
-
+   
     @classmethod
     def tearDownClass(cls):
         cls.driver.close()

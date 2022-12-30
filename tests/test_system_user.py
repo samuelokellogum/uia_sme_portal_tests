@@ -23,10 +23,7 @@ class TestSystemUser(unittest.TestCase):
         self.driver.implicitly_wait(5)
         self.driver.get("https://demo.dcareug.com/uiatest/")
         self.assertEquals('System User - UIA', self.driver.title)
-
-    def test_logout(self):
-        self.assert_(False)  
-
+    
     @classmethod
     def tearDownClass(cls):
         cls.driver.close()

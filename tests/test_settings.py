@@ -27,6 +27,9 @@ class TestSettings(unittest.TestCase):
     def test_edit_lookup(self):
         self.assert_(False)  
 
+    def test_delete_lookup(self):
+        self.assert_(False)
+
     @classmethod
     def tearDownClass(cls):
         cls.driver.close()
