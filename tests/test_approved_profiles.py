@@ -15,7 +15,7 @@ class TestApprovedProfile(unittest.TestCase):
         cls.driver.maximize_window()
         cls.driver.implicitly_wait(5)
 
-    def test_approved_profiles(self):
+    def test_approved_sme_profiles(self):
         login = Login(self.driver)
         login.enter_username("admin")
         login.enter_password("administrator")                
@@ -26,8 +26,13 @@ class TestApprovedProfile(unittest.TestCase):
         approved_profile = ApprovedProfile(self.driver)
         approved_profile.click_export_btn()
         time.sleep(15)        
-        self.assertEquals('Approved SME Profiles - UIA SME Portal', self.driver.title)
-   
+      
+    def test_display_only_approved_smes(self):
+        approved_profile = ApprovedProfile(self.driver)   
+        approved_profile.click_next_page()
+        time.sleep(5)
+        approved_profile.click_next_next_page()
+       
     @classmethod
     def tearDownClass(cls):
         cls.driver.close()

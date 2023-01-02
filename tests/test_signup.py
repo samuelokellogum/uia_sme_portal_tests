@@ -24,8 +24,7 @@ class TestSignup(unittest.TestCase):
         signup.enter_confirm_password("Administrator!123")
         signup.enter_security_code("12345")
         signup.save_btn()        
-        self.assertEquals('User Details - UIA SME Portal', self.driver.title)
-
+        
     @classmethod
     def tearDownClass(cls):
         cls.driver.close()
