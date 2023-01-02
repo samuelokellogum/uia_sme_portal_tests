@@ -5,7 +5,7 @@ from uia_sme_portal_tests.pages.dashboard_page import Dashboard
 
 class TestDashboard(unittest.TestCase):  
     driver = None
-    baseURL = "https://demo.dcareug.com/uia/Account/Login"
+    baseURL = "https://demo.dcareug.com/uiatest/Account/Login"
     
     @classmethod
     def setUpClass(cls):
