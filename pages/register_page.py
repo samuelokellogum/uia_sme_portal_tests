@@ -23,7 +23,7 @@ class Register:
         self.driver.find_element(By.XPATH, "//input[@id='UserEmail']").send_keys(code)
 
     def enter_password(self, code):
-            self.driver.find_element(By.XPATH, "//input[@id='Password']").send_keys(code)
+        self.driver.find_element(By.XPATH, "//input[@id='Password']").send_keys(code)
 
     def enter_confirm_password(self, code):
         self.driver.find_element(By.XPATH, "//input[@id='ConfirmPassword']").send_keys(code)

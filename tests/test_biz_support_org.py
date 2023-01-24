@@ -2,9 +2,8 @@ import time
 import unittest
 from selenium import webdriver
 from uia_sme_portal_tests.pages.login_page import Login
-from uia_sme_portal_tests.pages.support_organisations.approved_support_org_page import ApprovedSupportOrg
 from uia_sme_portal_tests.pages.support_organisations.business_support_org_page import BusinessSupportOrg
-from uia_sme_portal_tests.pages.support_organisations.pending_support_org_page import PendingSupportOrg
+
 
 class TestBizSupportOrg(unittest.TestCase):  
     driver = None
@@ -29,32 +28,19 @@ class TestBizSupportOrg(unittest.TestCase):
         biz_support_org.add_new_org_btn()
         biz_support_org.enter_region('Central')
         biz_support_org.enter_subregion('Central')
-        biz_support_org.enter_district('Buikwe')        
+        biz_support_org.enter_district('Buikwe')
+        biz_support_org.enter_no_of_male_employees('14')
+        biz_support_org.enter_no_of_female_employees('23')
+        biz_support_org.enter_telephone('0778676543')
+        biz_support_org.enter_contact_person('Chief Executive Officer')
+        biz_support_org.enter_po_box('P.O.Box 2345')
+        biz_support_org.enter_fax('567')
+        biz_support_org.enter_email('admin@admin.com')
+        biz_support_org.enter_website('www.sample.com')
+        biz_support_org.enter_title('CEO')
         time.sleep(30)    
         biz_support_org.save_btn()
-        self.assertTrue(True)
-        
-      
-    # def test_approved_support_organisation(self):
-    #     login = Login(self.driver)
-    #     login.enter_username("admin")
-    #     login.enter_password("administrator")                
-    #     time.sleep(15)                     
-    #     login.login_btn()
-    #     self.driver.get('https://demo.dcareug.com/uiatest/BusinessSupportOrg/ApprovedOrganisation')
-    #     time.sleep(5)
-    #     app_support_org = ApprovedSupportOrg(self.driver)
-        
-
-    # def test_pending_support_organisation(self):
-    #     login = Login(self.driver)
-    #     login.enter_username("admin")
-    #     login.enter_password("administrator")                
-    #     time.sleep(15)                     
-    #     login.login_btn()
-    #     self.driver.get('https://demo.dcareug.com/uiatest/BusinessSupportOrg/PendingOrganisation')
-    #     time.sleep(5)
-    #     pend_support_org = PendingSupportOrg(self.driver)
+        self.assertEquals("Business Support Organisation - UIA SME Portal", self.driver.title)
        
     @classmethod
     def tearDownClass(cls):
