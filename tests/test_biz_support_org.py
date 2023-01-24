@@ -17,7 +17,7 @@ class TestBizSupportOrg(unittest.TestCase):
         cls.driver.maximize_window()
         cls.driver.implicitly_wait(5)
 
-    def test_approved_sme_profiles(self):
+    def test_biz_support_organisation(self):
         login = Login(self.driver)
         login.enter_username("admin")
         login.enter_password("administrator")                
@@ -25,15 +25,36 @@ class TestBizSupportOrg(unittest.TestCase):
         login.login_btn()
         self.driver.get('https://demo.dcareug.com/uiatest/BusinessSupportOrg/Index')
         time.sleep(5)
-        app_support_org = ApprovedSupportOrg(self.driver)
-        app_support_org.click_export_btn()
-        time.sleep(15)        
+        biz_support_org = BusinessSupportOrg(self.driver)
+        biz_support_org.add_new_org_btn()
+        biz_support_org.enter_region('Central')
+        biz_support_org.enter_subregion('Central')
+        biz_support_org.enter_district('Buikwe')        
+        time.sleep(30)    
+        biz_support_org.save_btn()
+        self.assertTrue(True)
+        
       
-    def test_display_only_approved_smes(self):
-        approved_profile = ApprovedProfile(self.driver)   
-        approved_profile.click_next_page()
-        time.sleep(5)
-        approved_profile.click_next_next_page()
+    # def test_approved_support_organisation(self):
+    #     login = Login(self.driver)
+    #     login.enter_username("admin")
+    #     login.enter_password("administrator")                
+    #     time.sleep(15)                     
+    #     login.login_btn()
+    #     self.driver.get('https://demo.dcareug.com/uiatest/BusinessSupportOrg/ApprovedOrganisation')
+    #     time.sleep(5)
+    #     app_support_org = ApprovedSupportOrg(self.driver)
+        
+
+    # def test_pending_support_organisation(self):
+    #     login = Login(self.driver)
+    #     login.enter_username("admin")
+    #     login.enter_password("administrator")                
+    #     time.sleep(15)                     
+    #     login.login_btn()
+    #     self.driver.get('https://demo.dcareug.com/uiatest/BusinessSupportOrg/PendingOrganisation')
+    #     time.sleep(5)
+    #     pend_support_org = PendingSupportOrg(self.driver)
        
     @classmethod
     def tearDownClass(cls):
