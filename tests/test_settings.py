@@ -31,7 +31,50 @@ class TestSettings(unittest.TestCase):
         time.sleep(5)
         # system_user.click_next_next_btn()
         self.assertTrue(True)
+
+    def test_approval_setting(self):
+        self.driver.get("https://demo.dcareug.com/uiatest/WorkFlow/Index")
+        pass
+
+    def test_system_timeout_settings(self):
+        self.driver.get("https://demo.dcareug.com/uiatest/SystemConfiguration/Index")
+        pass
         
+    def test_site_manager(self):
+        self.driver.get("# https://demo.dcareug.com/uiatest/Landing/SiteManager")
+        pass
+
+    def test_notification_history(self):
+        self.driver.get("https://demo.dcareug.com/uiatest/NotificationHistory/Index")
+        pass
+
+    def test_email_settings(self):
+        self.driver.get("https://demo.dcareug.com/uiatest/EmailSettings/Index")
+        pass
+
+    def test_activity_log(self):
+        self.driver.get("https://demo.dcareug.com/uiatest/Account/ActivityLog")
+        pass
+
+    def test_security_role(self):
+        self.driver.get("https://demo.dcareug.com/uiatest/SecurityRoles/Index")
+        pass
+
+    def test_lookups_mapping(self):
+        self.driver.get("https://demo.dcareug.com/uiatest/Lookups/Mapping")
+        pass
+
+    def test_generic_lookups(self):
+        self.driver.get("https://demo.dcareug.com/uiatest/Lookups/Index")
+        pass
+
+    def test_financial_years(self):
+        self.driver.get("https://demo.dcareug.com/uiatest/FinancialYear/Index")
+        pass
+
+    def test_system_user(self):
+        self.driver.get("https://demo.dcareug.com/uiatest/Account/SystemUsers")
+        pass
 
     @classmethod
     def tearDownClass(cls):
